@@ -8,7 +8,7 @@ from PIL import Image
 # @project : hvAutoPony
 # @file: filePicToWebp.py
 # @time: 2021/8/3 下午8:30
-# @desc:
+# @desc: replace the suffix of the image link in the article
 from PIL import Image
 import os
 

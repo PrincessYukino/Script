@@ -7,7 +7,7 @@
 # @project : Script
 # @file: recodeLRC.py
 # @time: 2021/9/20 17:48
-# @desc:
+# @desc: fix .lrc format problem causing Walkman ZX300A to display garbled characters
 
 import os
 import codecs

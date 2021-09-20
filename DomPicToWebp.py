@@ -7,7 +7,7 @@
 # @project : hvAutoPony
 # @file: domPicToWebp.py
 # @time: 2021/8/4 下午4:11
-# @desc:
+# @desc: batch conversion of picture files to WEBP
 import os
 
 for root, folder, files in os.walk(''):
