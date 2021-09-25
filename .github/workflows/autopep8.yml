@@ -12,9 +12,11 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          token: ${{ secrets.Bot_Token }}
           commit-message: autopep8 action fixes
           title: Fixes by autopep8 action
           body: This is an auto-generated PR with fixes by autopep8.
           labels: autopep8, automated pr
-          reviewers: peter-evans
+          reviewers: DragonXuan
+          commiter: PrincessYukino <yukino@sku.moe>
           branch: autopep8-patches
