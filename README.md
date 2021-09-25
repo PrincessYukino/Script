@@ -19,12 +19,25 @@ _Never be a script kiddie_
 
 ## Directions 说明
 
-|  Name   | Effect  | 作用 |
-|  ----  | ----  |  ----  |
-| pidToAuthor | Move to the corresponding author name folder according to the PID of the file name | 根据文件中的 pixiv PID 将其分类至每个画师的文件夹 |
-| DomPicToWebp  | batch conversion of picture files to WEBP | 将目录下所有将图片格式更改为 WEBP |
-| FilePicToWebp  | replace the suffix of the image link in the article | 将目录下所有文本文件中所有图片URL中的后缀更改为.webp |
-| recodeLRC | fix .lrc format problem causing Walkman ZX300A to display garbled characters | 修复 Walkman ZX300A 歌词乱码 |
+|  文件名  | 作用 |
+|  ----  | ----  | 
+| recode-lrc | 修复 Walkman ZX300A 歌词乱码 |
+
+### File
+
+|  文件名  | 作用 |
+|  ----  | ----  | 
+| pid-to-author |  根据文件中的 pixiv PID 将其分类至每个画师的文件夹 |
+| dompic-to-webp  |  将目录下所有将图片格式更改为 WEBP |
+| filepic-to-webp  |  将目录下所有文本文件中所有图片URL中的后缀更改为.webp |
+
+### EHentai
+
+|  文件名  | 作用 |
+|  ----  | ----  | 
+| ehviewer-backup  | 备份 Ehviewer 中历史记录 |
+
+#### Hentaiverse
 
 
 ## Maintainer 维护者
