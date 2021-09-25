@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : FinancialStatistics
-# @file: check_owner.py
+# @file: check-owner.py
 # @time: 2021/6/7 19:23
 # @desc:
 import re

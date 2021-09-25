@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : hvMonsterAvatar
-# @file: UpdataMonsterDatabase.py
+# @file: updata-monster-database.py
 # @time: 2021/5/23 16:29
 # @desc: a mischief never imitate
 import requests

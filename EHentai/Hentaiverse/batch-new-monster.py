@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : hvMonsterAvatar
-# @file: BatchNewMonster.py
+# @file: batch-new-monster.py
 # @time: 2021/5/23 13:34
 # @desc: New a Monster and RENAME
 

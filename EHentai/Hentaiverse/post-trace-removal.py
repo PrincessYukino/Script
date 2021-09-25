@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : PythonScript
-# @file: postTraceRemoval.py.py
+# @file: post-trace-removal.py.py
 # @time: 2021/7/18 18:34
 # @desc:
 import re, time

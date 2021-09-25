@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : hvFinanceLogs
-# @file: dealVideo.py
+# @file: deal-video.py
 # @time: 2021/4/17 1:07
 # @desc: Cosersets File Check
 
@@ -19,7 +19,7 @@ correct_suffix_image = ['bin','webp', 'gif', 'jpg', 'jpeg', 'heic']
 # folder => 本目录下的文件夹
 # files => 本目录下的文件
 print("━━━━━━━━开始━━━━━━━━")
-for root, folder, files in os.walk('./'):
+for root, folder, files in os.walk('../'):
     print(f'━━当前目录为{root}')
     move = False
     detected_video = []

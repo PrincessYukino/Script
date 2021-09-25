@@ -5,7 +5,7 @@
 # @contact: sukeycz0@gmail.com
 # @software: PyCharm
 # @project : hvMonsterAvatar
-# @file: pidToAuthor.py
+# @file: pid-to-author.py
 # @time: 2021/5/23 16:52
 # @desc: 根据文件名的PID移动至对应作者名称文件夹
 
@@ -28,7 +28,7 @@ def get_author(pid):
 if __name__ == '__main__':
     session = requests.Session()
 
-    for root, folder, files in os.walk('./'):
+    for root, folder, files in os.walk('../'):
         time.sleep(1)
         print(f'━━当前目录为{root}')
         move = False
