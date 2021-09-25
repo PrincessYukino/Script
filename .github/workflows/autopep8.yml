@@ -18,5 +18,5 @@ jobs:
           body: This is an auto-generated PR with fixes by autopep8.
           labels: autopep8, automated pr
           reviewers: DragonXuan
-          commiter: PrincessYukino <yukino@sku.moe>
+          committer: PrincessYukino <yukino@sku.moe>
           branch: autopep8-patches
