@@ -24,6 +24,7 @@ def check(url):
     if owner:
         return owner.text
 
+
 if __name__ == '__main__':
     session = auth.hv_login()
     a = 0
@@ -34,4 +35,3 @@ if __name__ == '__main__':
             print(f"装备被洗:{i}")
         if owner != "":
             print(f"拥有者错误:{i}")
-

@@ -8,7 +8,8 @@
 # @file: post-trace-removal.py.py
 # @time: 2021/7/18 18:34
 # @desc:
-import re, time
+import re
+import time
 import requests
 from bs4 import BeautifulSoup
 

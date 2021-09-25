@@ -16,7 +16,6 @@ import requests
 config = json.load(open('config.json'))
 
 
-
 def eh_auth():
     session = requests.Session()
     EHLOGINURL = "https://forums.e-hentai.org/index.php?act=Login&CODE=01"
@@ -34,7 +33,7 @@ def eh_auth_check(session):
         for c in session.cookies:
             if (c.domain == '.e-hentai.org'
                 and c.name == '__cfduid'
-                and c.expires > time()):
+                    and c.expires > time()):
                 return True
     return False
 
@@ -51,6 +50,6 @@ def hv_auth_check(session):
         for c in session.cookies:
             if (c.domain == '.hentaiverse.org'
                 and c.name == '__cfduid'
-                and c.expires > time()):
+                    and c.expires > time()):
                 return True
     return False

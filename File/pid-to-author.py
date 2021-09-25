@@ -9,8 +9,10 @@
 # @time: 2021/5/23 16:52
 # @desc: 根据文件名的PID移动至对应作者名称文件夹
 
-import requests, os
-import json, time
+import requests
+import os
+import json
+import time
 from bs4 import BeautifulSoup as Bs
 
 suffix_image = ['jpg', 'webp', 'png', 'webm']

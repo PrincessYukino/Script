@@ -14,5 +14,3 @@ from bs4 import BeautifulSoup as Soup
 
 
 session = auth.hv_login()
-
-

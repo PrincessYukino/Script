@@ -12,7 +12,7 @@
 import os
 
 correct_suffix_video = ['mp4', 'mov']
-correct_suffix_image = ['bin','webp', 'gif', 'jpg', 'jpeg', 'heic']
+correct_suffix_image = ['bin', 'webp', 'gif', 'jpg', 'jpeg', 'heic']
 
 # E.G. => ./AAA ['BBB'] []
 # root => 本目录
@@ -31,7 +31,7 @@ for root, folder, files in os.walk('../'):
             file_suffix = file.split('.', 1)[1].lower()  # 文件后缀
             if file_suffix in correct_suffix_video:
                 print(f'┃━━检测到视频{file}')
-                detected_video.append([file_name,file])
+                detected_video.append([file_name, file])
             else:
                 move = True
         print("━━━━━━━查询完毕━━━━━━━")
@@ -41,10 +41,10 @@ for root, folder, files in os.walk('../'):
         print("━━━━━━━开始移动━━━━━━━")
         if move:
             for video in detected_video:
-                 print(f'┃━━将视频从{root}/{video[1]}移动至{root}/视频/{video[1]}')
-                 if not os.path.exists(f"{root}/视频"):
-                     os.mkdir(f"{root}/视频")
-                 os.rename(f"{root}/{video[1]}", f"{root}/视频/{video[1]}")
+                print(f'┃━━将视频从{root}/{video[1]}移动至{root}/视频/{video[1]}')
+                if not os.path.exists(f"{root}/视频"):
+                    os.mkdir(f"{root}/视频")
+                os.rename(f"{root}/{video[1]}", f"{root}/视频/{video[1]}")
         print("━━━━━━━移动结束━━━━━━━")
     else:
         print('┃━未检测到视频')

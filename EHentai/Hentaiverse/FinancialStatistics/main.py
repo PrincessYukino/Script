@@ -16,8 +16,7 @@ ipb_pass_hash = ''
 
 session = requests.Session()
 if ipb_member_id and ipb_pass_hash:
-    session.get(f'http://alt.hentaiverse.org/login?ipb_member_id={ipb_member_id}&ipb_pass_hash={ipb_pass_hash}')
+    session.get(
+        f'http://alt.hentaiverse.org/login?ipb_member_id={ipb_member_id}&ipb_pass_hash={ipb_pass_hash}')
 else:
     exit()
-
-

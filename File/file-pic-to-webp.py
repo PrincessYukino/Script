@@ -13,7 +13,12 @@ from PIL import Image
 import os
 
 IF_DELETE_OR = True
-IGNORE_FILE = ['.npmignore', '.DS_Store', '.gitignore', 'package.json', '.gitattributes']
+IGNORE_FILE = [
+    '.npmignore',
+    '.DS_Store',
+    '.gitignore',
+    'package.json',
+    '.gitattributes']
 IGNORE_FOLDER = ['.git']
 REPLACE_FILE = ['jpeg', 'jpg', 'png']
 

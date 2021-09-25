@@ -9,8 +9,10 @@
 # @time: 2021/5/23 13:34
 # @desc: New a Monster and RENAME
 
-import requests, re
-import json, time
+import requests
+import re
+import json
+import time
 from bs4 import BeautifulSoup as Bs
 
 config = json.load(open('config.json'))
@@ -19,22 +21,37 @@ HvLoginURL = f"http://alt.hentaiverse.org/login?ipb_member_id={config['ipb_membe
 
 def create_new(m_class='giant', m_patk='crsh'):
     if m_patk == 'crushing':
-        if m_class not in ['arthropod', 'dragonkin', 'giant', 'humanoid', 'undead']:
+        if m_class not in [
+            'arthropod',
+            'dragonkin',
+            'giant',
+            'humanoid',
+                'undead']:
             return False
     elif m_patk == 'piercing':
-        if m_class not in ['arthropod', 'avion', 'beast', 'daimon', 'dragonkin', 'humanoid', 'mechanoid', 'reptilian',
-                           'sprite']:
+        if m_class not in [
+            'arthropod',
+            'avion',
+            'beast',
+            'daimon',
+            'dragonkin',
+            'humanoid',
+            'mechanoid',
+            'reptilian',
+                'sprite']:
             return False
     elif m_patk in ['fire', 'elec', 'wind', 'cold']:
         if m_class != 'elemental':
             return False
-    m_patk = lambda x: {
+
+    def m_patk(x): return {
         x == 'crushing': 'crsh',
         x == 'piercing': 'prcg',
         x == 'slashing': 'slsh',
         x in ['fire', 'elec', 'wind', 'cold']: x
     }
-    m_class = lambda x: {
+
+    def m_class(x): return {
         x == 'arthropod': 1,
         x == 'avion': 2,
         x == 'beast': 3,
@@ -49,9 +66,11 @@ def create_new(m_class='giant', m_patk='crsh'):
         x == 'sprite': 14,
         x == 'undead': 15
     }
-    resp = session.post('http://alt.hentaiverse.org/?s=Bazaar&ss=ml&create=new', data={
-        'selected_class': m_class,
-        'selected_patk': m_patk})
+    resp = session.post(
+        'http://alt.hentaiverse.org/?s=Bazaar&ss=ml&create=new',
+        data={
+            'selected_class': m_class,
+            'selected_patk': m_patk})
     resp = Bs(resp.text, 'html.parser')
     if resp.find('div', id='monsterstats_rename'):
         return True
@@ -75,11 +94,15 @@ def feed_and_drug(slot_id):
 
 def upgrade(slot_id, pa=None, em=None):
     if pa:
-        session.post(f'http://alt.hentaiverse.org/?s=Bazaar&ss=ml&slot={slot_id}', data={
-            'crystal_upgrade': f'pa_{pa}'})
+        session.post(
+            f'http://alt.hentaiverse.org/?s=Bazaar&ss=ml&slot={slot_id}',
+            data={
+                'crystal_upgrade': f'pa_{pa}'})
     else:
-        session.post(f'http://alt.hentaiverse.org/?s=Bazaar&ss=ml&slot={slot_id}', data={
-            'crystal_upgrade': f'er_{em}'})
+        session.post(
+            f'http://alt.hentaiverse.org/?s=Bazaar&ss=ml&slot={slot_id}',
+            data={
+                'crystal_upgrade': f'er_{em}'})
 
 
 def upgrade_to_lv25(slot_id, ex_types='str'):
@@ -114,7 +137,10 @@ def delete(slot_id):
     resp = Bs(resp.text, 'html.parser')
     scripts = resp.find_all("script", type="text/javascript")
     for script in scripts:
-        out = (re.findall(r'e\("delete_monster"\).value = \"(.*?)\";', str(script)))
+        out = (
+            re.findall(
+                r'e\("delete_monster"\).value = \"(.*?)\";',
+                str(script)))
         if out:
             session.post(url, data={
                 'delete_monster': out[0]})
@@ -127,7 +153,12 @@ if __name__ == '__main__':
     session.get(HvLoginURL)
 
     for i in range(126, 149):
-        time_now = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + " 怪物编号" + str(i))
+        time_now = str(
+            time.strftime(
+                "%Y-%m-%d %H:%M:%S",
+                time.localtime()) +
+            " 怪物编号" +
+            str(i))
         # delete_token, status = delete(i)
         # if status == 0:
         #     time_now += f" 怪物删除{delete_token}"
